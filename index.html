@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			background-color: #333;
+		}
+
+	.wrapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+	}
+	span{
+		color: #eee;
+	}
+	button{
+		cursor: pointer;
+		position: absolute;
+		width: fit-content;
+		height: fit-content;
+		transition: all 0.2s;
+		border-radius: 8px;
+	}
+	#yes {
+		transform: translate(-50px, 120px);
+	}
+	#no {
+		transform: translate(-50px, 120px);
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<span id="msg">Valentine's na bukas, Gusto mo ba akong makasama?</span>
+	<img src="https://media1.tenor.com/images/11c5360a19960c9fe2d014f66c283b06/tenor.gif?itemid=17876456" alt="" id="sticker" height="150px" width="150px">
+	<button id="yes">Yes!!!</button>
+	<button id="no">No.</button>
+</div>
+
+<script>
+	let no = document.getElementById('no');
+	let sticker = document.getElementById('sticker');
+	let msg = document.getElementById('msg');
+	let gak = 0;
+
+	no.addEventListener('mouseover', function(){
+		let randX = Math.random() * 50;
+		let randY = Math.random() * 50;
+
+		no.style.left = randX + '%';
+		no.style.top = randY + '%';
+		gak++;
+	})
+
+</script>>
+
+</body>
+</html>
